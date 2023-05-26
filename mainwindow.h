@@ -4,7 +4,8 @@
 #include <QMainWindow>
 #include <QProcess>
 #include <QString>
-#include <QStringList>
+#include <QFile>
+#include <QFileDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,6 +18,15 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private slots:
+    void on_toolButtonExecutableOpen_clicked();
+
+    void on_toolButtonExecutableClear_clicked();
+
+    void on_toolButtonArgsClear_clicked();
+
+    void on_toolButtonInputOpen_clicked();
 
 private:
     Ui::MainWindow *ui;

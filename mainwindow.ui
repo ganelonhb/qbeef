@@ -22,48 +22,95 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="2" column="0">
-     <widget class="QLabel" name="labelInputFile">
+    <item row="1" column="0">
+     <widget class="QLabel" name="labelArgs">
       <property name="text">
-       <string>Input File (Optional):</string>
+       <string>Arguments:</string>
       </property>
      </widget>
     </item>
-    <item row="8" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item row="2" column="2">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QPushButton" name="pushButtonGenerateReport">
+       <widget class="QLineEdit" name="lineEditInput">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A path to a file containing test input values (for interactive CLI programs)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="toolButtonInputOpen">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="cursor">
          <cursorShape>PointingHandCursor</cursorShape>
         </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the file dialog for the &lt;span style=&quot; font-weight:700;&quot;&gt;Input File &lt;/span&gt;field&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
         <property name="text">
-         <string>Generate Report</string>
+         <string/>
         </property>
         <property name="icon">
-         <iconset theme="system-run">
+         <iconset theme="document-open">
           <normaloff>.</normaloff>.</iconset>
         </property>
        </widget>
       </item>
       <item>
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
+       <widget class="QToolButton" name="toolButtonInputClear">
+        <property name="enabled">
+         <bool>true</bool>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
         </property>
-       </spacer>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear the path in the &lt;span style=&quot; font-weight:700;&quot;&gt;Input File &lt;/span&gt;field&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset theme="edit-clear">
+          <normaloff>.</normaloff>.</iconset>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
-    <item row="0" column="2">
-     <widget class="QLineEdit" name="lineEditExecutable">
+    <item row="0" column="0">
+     <widget class="QLabel" name="labelProgram">
+      <property name="text">
+       <string>Program Executable:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0" colspan="5">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QToolButton" name="toolButtonExecutableOpen">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A path to an executable on disk.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the file dialog for the &lt;span style=&quot; font-weight:700;&quot;&gt;Program Executable &lt;/span&gt;field&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset theme="document-open">
+        <normaloff>.</normaloff>.</iconset>
       </property>
      </widget>
     </item>
@@ -160,116 +207,41 @@
       </item>
      </layout>
     </item>
-    <item row="0" column="3">
-     <widget class="QToolButton" name="toolButtonExecutableOpen">
-      <property name="cursor">
-       <cursorShape>PointingHandCursor</cursorShape>
-      </property>
+    <item row="0" column="2">
+     <widget class="QLineEdit" name="lineEditExecutable">
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the file dialog for the &lt;span style=&quot; font-weight:700;&quot;&gt;Program Executable &lt;/span&gt;field&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset theme="document-open">
-        <normaloff>.</normaloff>.</iconset>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A path to an executable on disk.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="labelProgram">
-      <property name="text">
-       <string>Program Executable:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="2">
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item row="8" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
-       <widget class="QLineEdit" name="lineEditArgs"/>
-      </item>
-      <item>
-       <widget class="QToolButton" name="toolButtonArgsClear">
+       <widget class="QPushButton" name="pushButtonGenerateReport">
         <property name="cursor">
          <cursorShape>PointingHandCursor</cursorShape>
         </property>
         <property name="text">
-         <string/>
+         <string>Generate Report</string>
         </property>
         <property name="icon">
-         <iconset theme="edit-clear">
-          <normaloff>.</normaloff>.</iconset>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="labelArgs">
-      <property name="text">
-       <string>Arguments:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="0" colspan="5">
-     <widget class="Line" name="line">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="2">
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QLineEdit" name="lineEditInput">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="toolTip">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A path to a file containing test input values (for interactive CLI programs)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="toolButtonInputOpen">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="toolTip">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the file dialog for the &lt;span style=&quot; font-weight:700;&quot;&gt;Input File &lt;/span&gt;field&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset theme="document-open">
+         <iconset theme="system-run">
           <normaloff>.</normaloff>.</iconset>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QToolButton" name="toolButtonInputClear">
-        <property name="enabled">
-         <bool>true</bool>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
         </property>
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
         </property>
-        <property name="toolTip">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear the path in the &lt;span style=&quot; font-weight:700;&quot;&gt;Input File &lt;/span&gt;field&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset theme="edit-clear">
-          <normaloff>.</normaloff>.</iconset>
-        </property>
-       </widget>
+       </spacer>
       </item>
      </layout>
     </item>
@@ -297,15 +269,43 @@
       </property>
      </widget>
     </item>
+    <item row="1" column="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLineEdit" name="lineEditArgs"/>
+      </item>
+      <item>
+       <widget class="QToolButton" name="toolButtonArgsClear">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset theme="edit-clear">
+          <normaloff>.</normaloff>.</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="labelInputFile">
+      <property name="text">
+       <string>Input File (Optional):</string>
+      </property>
+     </widget>
+    </item>
     <item row="3" column="2" rowspan="2" colspan="2">
      <widget class="QTabWidget" name="tabWidgetSettings">
       <property name="autoFillBackground">
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
-      <widget class="QWidget" name="tabWidgetSettingsPage1" native="true">
+      <widget class="QWidget" name="tabWidgetSettingsPage1">
        <attribute name="title">
         <string>General</string>
        </attribute>
@@ -335,17 +335,17 @@
           </item>
          </widget>
         </item>
-        <item row="0" column="0">
-         <widget class="QLabel" name="labelCheck">
-          <property name="text">
-           <string>Leak-Check:</string>
-          </property>
-         </widget>
-        </item>
         <item row="1" column="0">
          <widget class="QLabel" name="labelResolution">
           <property name="text">
            <string>Leak Resolution:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelCheck">
+          <property name="text">
+           <string>Leak-Check:</string>
           </property>
          </widget>
         </item>
@@ -520,6 +520,151 @@
           </property>
           <property name="checked">
            <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Advanced</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="4" column="1" colspan="2">
+         <widget class="QGroupBox" name="groupBoxExpensiveDef">
+          <property name="title">
+           <string>expensive-definedness-checks</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QRadioButton" name="radioButtonExpensiveDefYes">
+             <property name="text">
+              <string>yes</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButtonExpensiveDefAuto">
+             <property name="text">
+              <string>auto</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButtonExpensiveDefNo">
+             <property name="text">
+              <string>no</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="3" column="1" colspan="2">
+         <widget class="Line" name="line_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QCheckBox" name="checkBoxPartialLoads">
+          <property name="text">
+           <string>partial-loads-ok</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QCheckBox" name="checkBoxTrackOrigins">
+          <property name="text">
+           <string>track-origins</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1" colspan="2">
+         <widget class="QGroupBox" name="groupBoxKeepStack">
+          <property name="title">
+           <string>keep-stacktraces-alloc</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QRadioButton" name="radioButtonKeepStackAlloc">
+             <property name="text">
+              <string>alloc</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButtonKeepStackFree">
+             <property name="text">
+              <string>free</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButtonKeepStackAllocAndFree">
+             <property name="text">
+              <string>alloc-and-free</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButtonKeepStackAllocThenFree">
+             <property name="text">
+              <string>alloc-then-free</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButtonKeepStackNone">
+             <property name="text">
+              <string>none</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="7" column="2">
+         <widget class="QSpinBox" name="spinBoxFreelistVol">
+          <property name="maximum">
+           <number>999999999</number>
+          </property>
+          <property name="value">
+           <number>20000000</number>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1" colspan="2">
+         <widget class="Line" name="line_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="checkBoxUndefValue">
+          <property name="text">
+           <string>undef-value-errors</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QLabel" name="labelFreelistVol">
+          <property name="text">
+           <string>freelist-vol:</string>
           </property>
          </widget>
         </item>

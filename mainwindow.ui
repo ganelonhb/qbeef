@@ -503,12 +503,18 @@
              <property name="enabled">
               <bool>false</bool>
              </property>
+             <property name="maximum">
+              <number>999999999</number>
+             </property>
             </widget>
            </item>
            <item row="1" column="0">
             <widget class="QSpinBox" name="spinBoxIgnoreRangeBelowSPLower">
              <property name="enabled">
               <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <number>999999999</number>
              </property>
             </widget>
            </item>

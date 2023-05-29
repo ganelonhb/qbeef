@@ -134,7 +134,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabWidgetSettingsPage1">
        <attribute name="title">
@@ -358,6 +358,19 @@
           </layout>
          </widget>
         </item>
+        <item row="4" column="0">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="tab_3">
@@ -365,7 +378,114 @@
         <string>Advanced</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_5">
-        <item row="10" column="1" colspan="2">
+        <item row="15" column="1" colspan="2">
+         <widget class="Line" name="line_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QCheckBox" name="checkBoxTrackOrigins">
+          <property name="text">
+           <string>track-origins</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QCheckBox" name="checkBoxUndefValue">
+          <property name="text">
+           <string>undef-value-errors</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1" colspan="2">
+         <widget class="Line" name="line_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="18" column="1">
+         <widget class="QLabel" name="labelFreeFill">
+          <property name="text">
+           <string>free-fill:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QCheckBox" name="checkBoxPartialLoads">
+          <property name="text">
+           <string>partial-loads-ok</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="1">
+         <widget class="QLabel" name="labelMallocFill">
+          <property name="text">
+           <string>malloc-fill:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1" colspan="2">
+         <widget class="QGroupBox" name="groupBoxExpensiveDef">
+          <property name="title">
+           <string>expensive-definedness-checks:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QRadioButton" name="radioButtonExpensiveDefYes">
+             <property name="text">
+              <string>yes</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButtonExpensiveDefAuto">
+             <property name="text">
+              <string>auto</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButtonExpensiveDefNo">
+             <property name="text">
+              <string>no</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="18" column="2">
+         <widget class="QSpinBox" name="spinBox">
+          <property name="maximum">
+           <number>255</number>
+          </property>
+          <property name="displayIntegerBase">
+           <number>8</number>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="1" colspan="2">
          <widget class="QGroupBox" name="groupBoxIgnoreRangeBelowSP">
           <property name="title">
            <string>ignore-range-below-sp:</string>
@@ -425,7 +545,85 @@
           </layout>
          </widget>
         </item>
-        <item row="5" column="1" colspan="2">
+        <item row="9" column="1">
+         <widget class="QLabel" name="labelVolRange">
+          <property name="text">
+           <string>Volumes and Ranges:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="2">
+         <widget class="QSpinBox" name="spinBoxMallocFill">
+          <property name="maximum">
+           <number>255</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+          <property name="displayIntegerBase">
+           <number>16</number>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="1">
+         <widget class="QLabel" name="labelFreelistVol">
+          <property name="text">
+           <string>freelist-vol:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="labelBCLI">
+          <property name="text">
+           <string>Boolean CLI Options:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QCheckBox" name="checkBoxShowMismatchedFrees">
+          <property name="text">
+           <string>show-mismatched-frees</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1" colspan="2">
+         <widget class="Line" name="line_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="2">
+         <widget class="QSpinBox" name="spinBoxFreelistBigBlocks">
+          <property name="maximum">
+           <number>999999999</number>
+          </property>
+          <property name="value">
+           <number>1000000</number>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="2">
+         <widget class="QSpinBox" name="spinBoxFreelistVol">
+          <property name="maximum">
+           <number>999999999</number>
+          </property>
+          <property name="value">
+           <number>20000000</number>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="1">
+         <widget class="QLabel" name="labelFreelistBigBlocks">
+          <property name="text">
+           <string>freelist-big-blocks:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1" colspan="2">
          <widget class="QGroupBox" name="groupBoxKeepStack">
           <property name="title">
            <string>keep-stacktraces-alloc</string>
@@ -472,174 +670,17 @@
           </layout>
          </widget>
         </item>
-        <item row="0" column="2">
-         <widget class="QCheckBox" name="checkBoxPartialLoads">
+        <item row="5" column="1">
+         <widget class="QLabel" name="labelMVCLI">
           <property name="text">
-           <string>partial-loads-ok</string>
-          </property>
-          <property name="checked">
-           <bool>true</bool>
+           <string>Multi-Valued CLI Options:</string>
           </property>
          </widget>
         </item>
-        <item row="13" column="2">
-         <widget class="QSpinBox" name="spinBoxMallocFill">
-          <property name="maximum">
-           <number>255</number>
-          </property>
-          <property name="value">
-           <number>0</number>
-          </property>
-          <property name="displayIntegerBase">
-           <number>16</number>
-          </property>
-         </widget>
-        </item>
-        <item row="6" column="1" colspan="2">
-         <widget class="Line" name="line_5">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QCheckBox" name="checkBoxUndefValue">
+        <item row="16" column="1">
+         <widget class="QLabel" name="labelFill">
           <property name="text">
-           <string>undef-value-errors</string>
-          </property>
-          <property name="checked">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="9" column="1">
-         <widget class="QLabel" name="labelFreelistBigBlocks">
-          <property name="text">
-           <string>freelist-big-blocks:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="12" column="1" colspan="2">
-         <widget class="Line" name="line_6">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="QCheckBox" name="checkBoxShowMismatchedFrees">
-          <property name="text">
-           <string>show-mismatched-frees</string>
-          </property>
-          <property name="checked">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="13" column="1">
-         <widget class="QLabel" name="labelMallocFill">
-          <property name="text">
-           <string>malloc-fill:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="1" colspan="2">
-         <widget class="Line" name="line_4">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QCheckBox" name="checkBoxTrackOrigins">
-          <property name="text">
-           <string>track-origins</string>
-          </property>
-         </widget>
-        </item>
-        <item row="8" column="1">
-         <widget class="QLabel" name="labelFreelistVol">
-          <property name="text">
-           <string>freelist-vol:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="9" column="2">
-         <widget class="QSpinBox" name="spinBoxFreelistBigBlocks">
-          <property name="maximum">
-           <number>999999999</number>
-          </property>
-          <property name="value">
-           <number>1000000</number>
-          </property>
-         </widget>
-        </item>
-        <item row="8" column="2">
-         <widget class="QSpinBox" name="spinBoxFreelistVol">
-          <property name="maximum">
-           <number>999999999</number>
-          </property>
-          <property name="value">
-           <number>20000000</number>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1" colspan="2">
-         <widget class="QGroupBox" name="groupBoxExpensiveDef">
-          <property name="title">
-           <string>expensive-definedness-checks:</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-          </property>
-          <property name="checkable">
-           <bool>false</bool>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_4">
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <item>
-            <widget class="QRadioButton" name="radioButtonExpensiveDefYes">
-             <property name="text">
-              <string>yes</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QRadioButton" name="radioButtonExpensiveDefAuto">
-             <property name="text">
-              <string>auto</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QRadioButton" name="radioButtonExpensiveDefNo">
-             <property name="text">
-              <string>no</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="14" column="1">
-         <widget class="QLabel" name="labelFreeFill">
-          <property name="text">
-           <string>free-fill:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="14" column="2">
-         <widget class="QSpinBox" name="spinBox">
-          <property name="maximum">
-           <number>255</number>
-          </property>
-          <property name="displayIntegerBase">
-           <number>8</number>
+           <string>Fill Options:</string>
           </property>
          </widget>
         </item>
@@ -823,6 +864,53 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>lineEditExecutable</tabstop>
+  <tabstop>toolButtonExecutableOpen</tabstop>
+  <tabstop>toolButtonExecutableClear</tabstop>
+  <tabstop>lineEditArgs</tabstop>
+  <tabstop>toolButtonArgsClear</tabstop>
+  <tabstop>lineEditInput</tabstop>
+  <tabstop>toolButtonInputOpen</tabstop>
+  <tabstop>toolButtonInputClear</tabstop>
+  <tabstop>treeViewMemoryLeaks</tabstop>
+  <tabstop>pushButtonGenerateReport</tabstop>
+  <tabstop>tabWidgetSettings</tabstop>
+  <tabstop>comboBoxCheckType</tabstop>
+  <tabstop>comboBoxResolution</tabstop>
+  <tabstop>checkBoxAllLeaks</tabstop>
+  <tabstop>checkBoxIndirect</tabstop>
+  <tabstop>checkBoxReachable</tabstop>
+  <tabstop>checkBoxPossible</tabstop>
+  <tabstop>checkBoxDefinite</tabstop>
+  <tabstop>checkBoxAllHeuristics</tabstop>
+  <tabstop>checkBoxHstdstring</tabstop>
+  <tabstop>checkBoxHlength64</tabstop>
+  <tabstop>checkBoxHnewarray</tabstop>
+  <tabstop>checkBoxHmultipleinheritance</tabstop>
+  <tabstop>checkBoxUndefValue</tabstop>
+  <tabstop>checkBoxPartialLoads</tabstop>
+  <tabstop>checkBoxTrackOrigins</tabstop>
+  <tabstop>checkBoxShowMismatchedFrees</tabstop>
+  <tabstop>radioButtonExpensiveDefYes</tabstop>
+  <tabstop>radioButtonExpensiveDefAuto</tabstop>
+  <tabstop>radioButtonExpensiveDefNo</tabstop>
+  <tabstop>radioButtonKeepStackAlloc</tabstop>
+  <tabstop>radioButtonKeepStackFree</tabstop>
+  <tabstop>radioButtonKeepStackAllocAndFree</tabstop>
+  <tabstop>radioButtonKeepStackAllocThenFree</tabstop>
+  <tabstop>radioButtonKeepStackNone</tabstop>
+  <tabstop>spinBoxFreelistVol</tabstop>
+  <tabstop>spinBoxFreelistBigBlocks</tabstop>
+  <tabstop>radioButtonIgnoreRangeNo</tabstop>
+  <tabstop>radioButtonIgnoreRangeYes</tabstop>
+  <tabstop>radioButtonIgnoreRangeGCC</tabstop>
+  <tabstop>spinBoxIgnoreRangeBelowSPLower</tabstop>
+  <tabstop>spinBoxIgnoreRangeBelowSPUpper</tabstop>
+  <tabstop>spinBoxMallocFill</tabstop>
+  <tabstop>spinBox</tabstop>
+  <tabstop>pushButtonSaveReport</tabstop>
+ </tabstops>
  <resources>
   <include location="resources.qrc"/>
  </resources>

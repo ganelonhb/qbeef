@@ -51,7 +51,8 @@ void MainWindow::on_checkBoxAllLeaks_clicked(bool checked)
     ui->checkBoxPossible->setEnabled(!checked);
     ui->checkBoxDefinite->setEnabled(!checked);
 
-    if (checked) {
+    if (checked)
+    {
         ui->checkBoxIndirect->setChecked(true);
         ui->checkBoxReachable->setChecked(true);
         ui->checkBoxPossible->setChecked(true);
@@ -69,7 +70,8 @@ void MainWindow::on_checkBoxAllHeuristics_clicked(bool checked)
     ui->checkBoxHnewarray->setEnabled(!checked);
     ui->checkBoxHmultipleinheritance->setEnabled(!checked);
 
-    if (checked) {
+    if (checked)
+    {
         ui->checkBoxHstdstring->setChecked(true);
         ui->checkBoxHlength64->setChecked(true);
         ui->checkBoxHnewarray->setChecked(true);
@@ -82,7 +84,8 @@ void MainWindow::on_checkBoxAllHeuristics_clicked(bool checked)
 
 void MainWindow::on_radioButtonIgnoreRangeNo_toggled(bool checked)
 {
-    if (checked) {
+    if (checked)
+    {
         ui->spinBoxIgnoreRangeBelowSPLower->setEnabled(false);
         ui->labelTo->setEnabled(false);
         ui->spinBoxIgnoreRangeBelowSPUpper->setEnabled(false);
@@ -94,7 +97,8 @@ void MainWindow::on_radioButtonIgnoreRangeNo_toggled(bool checked)
 
 void MainWindow::on_radioButtonIgnoreRangeYes_toggled(bool checked)
 {
-    if (checked) {
+    if (checked)
+    {
         ui->spinBoxIgnoreRangeBelowSPLower->setEnabled(true);
         ui->labelTo->setEnabled(true);
         ui->spinBoxIgnoreRangeBelowSPUpper->setEnabled(true);
@@ -106,7 +110,8 @@ void MainWindow::on_radioButtonIgnoreRangeYes_toggled(bool checked)
 
 void MainWindow::on_radioButtonIgnoreRangeGCC_toggled(bool checked)
 {
-    if (checked) {
+    if (checked)
+    {
         ui->spinBoxIgnoreRangeBelowSPLower->setEnabled(false);
         ui->labelTo->setEnabled(true);
         ui->spinBoxIgnoreRangeBelowSPUpper->setEnabled(false);

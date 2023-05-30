@@ -3,6 +3,7 @@
 
 #include <QDomNode>
 #include <QHash>
+#include <QtAlgorithms>
 
 class DomItem
 {

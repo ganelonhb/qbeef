@@ -6,6 +6,7 @@
 #include <QString>
 #include <QFile>
 #include <QFileDialog>
+#include <QDomDocument>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -40,5 +41,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    QDomDocument doc;
 };
 #endif // MAINWINDOW_H

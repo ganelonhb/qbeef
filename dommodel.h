@@ -7,8 +7,10 @@
 #include <QAbstractItemModel>
 #include <QObject>
 #include <QDomDocument>
+#include <QDomNamedNodeMap>
 #include <QVariant>
 #include <QModelIndex>
+#include <QStringList>
 
 #include "domitem.h"
 

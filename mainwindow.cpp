@@ -49,25 +49,6 @@ void MainWindow::on_toolButtonInputOpen_clicked()
 }
 
 
-void MainWindow::on_checkBoxAllLeaks_clicked(bool checked)
-{
-    ui->checkBoxIndirect->setEnabled(!checked);
-    ui->checkBoxReachable->setEnabled(!checked);
-    ui->checkBoxPossible->setEnabled(!checked);
-    ui->checkBoxDefinite->setEnabled(!checked);
-
-    if (checked)
-    {
-        ui->checkBoxIndirect->setChecked(true);
-        ui->checkBoxReachable->setChecked(true);
-        ui->checkBoxPossible->setChecked(true);
-        ui->checkBoxDefinite->setChecked(true);
-    }
-
-    return;
-}
-
-
 void MainWindow::on_checkBoxAllHeuristics_clicked(bool checked)
 {
     ui->checkBoxHstdstring->setEnabled(!checked);

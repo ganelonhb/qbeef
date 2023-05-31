@@ -30,8 +30,6 @@ private slots:
 
     void on_toolButtonInputOpen_clicked();
 
-    void on_checkBoxAllLeaks_clicked(bool checked);
-
     void on_checkBoxAllHeuristics_clicked(bool checked);
 
     void on_radioButtonIgnoreRangeNo_toggled(bool checked);

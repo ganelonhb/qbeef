@@ -7,6 +7,7 @@
 #include <QFile>
 #include <QFileDialog>
 #include <QDomDocument>
+#include "detailedreportdockwidget.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -39,9 +40,13 @@ private slots:
 
     void on_radioButtonIgnoreRangeGCC_toggled(bool checked);
 
+    void on_pushButtonDetailedReport_clicked();
+
 private:
     Ui::MainWindow *ui;
 
     QDomDocument doc;
+    DetailedReportDockWidget* report;
+
 };
 #endif // MAINWINDOW_H

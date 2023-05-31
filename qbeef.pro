@@ -9,17 +9,20 @@ CONFIG += c++20
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    detailedreportdockwidget.cpp \
     domitem.cpp \
     dommodel.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    detailedreportdockwidget.h \
     domitem.h \
     dommodel.h \
     mainwindow.h
 
 FORMS += \
+    detailedreportdockwidget.ui \
     mainwindow.ui
 
 TRANSLATIONS += \
